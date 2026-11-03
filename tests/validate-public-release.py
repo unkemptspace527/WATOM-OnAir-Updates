@@ -79,5 +79,35 @@ for clip in tracks:
         fail("Public release rights not proven")
 allowed_audio={ROOT/"weekly-releases/audio"/pack/name for name in seen}
 hosted={f for f in ROOT.rglob("*.mp3") if ".git" not in f.parts}
-if hosted-allowed_audio:fail("Unapproved audio file exists in public repository")
-print("PASS: public original-only W.A.T.O.M. release",pack,"clips:",len(tracks),"rotation slots:",sum(len(m.get(k,[])) for k in ("music_rotation","jazz_rotation","ad_rotation")))
+# Verify every historical original recording too. An archived weekly pack may
+# remain publicly readable for earlier app versions; its SHA256 and matching
+# independent rights/QA report must still be verifiable.
+archived_count=0
+for audio in sorted(hosted-allowed_audio):
+    rel=audio.relative_to(ROOT).as_posix()
+    match=re.fullmatch(r"weekly-releases/audio/(20\d{2}-\d{2}-\d{2}-r[1-9]\d*)/([a-z0-9][a-z0-9_-]{1,55}\.mp3)",rel)
+    if not match: fail("Unapproved audio path in public repository")
+    old_release,filename=match.groups()
+    if old_release==pack: fail("Audio in current pack is missing from approved manifest")
+    if not 4096<=audio.stat().st_size<=900000:fail("Historical MP3 outside size limits")
+    actual=sha256(audio.read_bytes()).hexdigest()
+    try:historical_duration=MP3(audio).info.length
+    except Exception:fail("Undecodable historical MP3")
+    if not 1<=historical_duration<=900:fail("Historical MP3 has invalid duration")
+    audits=ROOT/"weekly-releases/audits"/old_release
+    if not audits.is_dir():fail("Historical MP3 is missing its release audit directory")
+    matches=[]
+    for proof in audits.glob("*.json"):
+        try:q=json.loads(proof.read_text("utf-8"))
+        except Exception:fail("Malformed historical approval report")
+        if q.get("audio_sha256")==actual and \
+           q.get("editorial_approved") is True and \
+           q.get("voice_checked") is True and \
+           q.get("content_checked") is True and \
+           q.get("original_content_verified") is True and \
+           q.get("public_distribution_cleared") is True:
+            matches.append(q)
+    if len(matches)!=1:fail("Historical original audio lacks unique matching rights QA")
+    archived_count+=1
+
+print("PASS: public original-only W.A.T.O.M. release",pack,"clips:",len(tracks),"historical clips:",archived_count,"rotation slots:",sum(len(m.get(k,[])) for k in ("music_rotation","jazz_rotation","ad_rotation")))
