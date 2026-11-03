@@ -1,0 +1,20 @@
+name: Verify W.A.T.O.M. original-only public updates
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install MP3 inspection library
+        run: python -m pip install --disable-pip-version-check mutagen
+      - name: Verify approved original clips, rights, SHA256, and expiring weather
+        run: python tests/validate-public-release.py
