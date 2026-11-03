@@ -4,9 +4,9 @@
   "release_id": "2026-11-03",
   "revision": 2,
   "approved_by": "WATOM programming director",
-  "approved_at": "2026-11-03T11:55:41Z",
+  "approved_at": "2026-11-03T11:55:43Z",
   "timezone": "America/Chicago",
-  "description": "First actual approved original Jack Sullivan World of Tomorrow audio delivery test and approved song rotation; no dated news/weather yet.",
+  "description": "First verified original Jack Sullivan MP3 delivered automatically; existing 46 music selections stay private, audio switches only at natural track boundary.",
   "music_rotation": [
     "wat002.mp3",
     "wat021.mp3",
@@ -62,20 +62,19 @@
   ],
   "tracks": [
     {
-      "file": "jack-sullivan-world-of-tomorrow-2026-11-03.mp3",
-      "title": "Jack Sullivan — World of Tomorrow Station ID",
-      "artist": "Jack “Sparky” Sullivan",
-      "category": "station_id",
+      "file": "jack-weekly-signal-2026-11-03.mp3",
+      "title": "Jack \"Sparky\" Sullivan — The Sunday Signal Arrives",
+      "category": "host",
       "broadcast_approved": true,
       "approved_by": "WATOM programming director",
-      "approval_record": "jack-sullivan-tomorrow-id.json",
-      "rights_cleared": true,
-      "origin_type": "original",
-      "verified_call_letters": true,
+      "approval_record": "jack-weekly-signal-2026-11-03.json",
       "voice_id": "hIAOYQ1TNWZSvbF1zJyI",
-      "size": 457280,
-      "durationSeconds": 27.481,
-      "sha256": "816ca46939093d5f1936b1fe88312fa37f2a66eecbbdecb48bcb44ddafbe9dea"
+      "origin_type": "original",
+      "rights_cleared": true,
+      "sha256": "1617a27202cb7208d12de92502f739013cbf6d202562b16e6b3efdf2fd886f1c",
+      "size": 484029,
+      "durationSeconds": 29.153,
+      "verified_call_letters": true
     }
   ]
 }
