@@ -2,11 +2,11 @@
   "schema_version": 1,
   "station": "W.A.T.O.M. 1240 AM",
   "release_id": "2026-11-03",
-  "revision": 1,
+  "revision": 2,
   "approved_by": "WATOM programming director",
-  "approved_at": "2026-11-03T10:05:02Z",
+  "approved_at": "2026-11-03T11:55:41Z",
   "timezone": "America/Chicago",
-  "description": "Private automatic update connectivity baseline; approved 46-song rotation, no newly generated audio.",
+  "description": "First actual approved original Jack Sullivan World of Tomorrow audio delivery test and approved song rotation; no dated news/weather yet.",
   "music_rotation": [
     "wat002.mp3",
     "wat021.mp3",
@@ -60,5 +60,22 @@
   "ad_rotation": [
     "starbrite-radio-polish-ad.mp3"
   ],
-  "tracks": []
+  "tracks": [
+    {
+      "file": "jack-sullivan-world-of-tomorrow-2026-11-03.mp3",
+      "title": "Jack Sullivan — World of Tomorrow Station ID",
+      "artist": "Jack “Sparky” Sullivan",
+      "category": "station_id",
+      "broadcast_approved": true,
+      "approved_by": "WATOM programming director",
+      "approval_record": "jack-sullivan-tomorrow-id.json",
+      "rights_cleared": true,
+      "origin_type": "original",
+      "verified_call_letters": true,
+      "voice_id": "hIAOYQ1TNWZSvbF1zJyI",
+      "size": 457280,
+      "durationSeconds": 27.481,
+      "sha256": "816ca46939093d5f1936b1fe88312fa37f2a66eecbbdecb48bcb44ddafbe9dea"
+    }
+  ]
 }
