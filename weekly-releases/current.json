@@ -6,7 +6,7 @@
   "approved_by": "WATOM programming director",
   "approved_at": "2026-11-03T11:55:43Z",
   "timezone": "America/Chicago",
-  "description": "First verified original Jack Sullivan MP3 delivered automatically; existing 46 music selections stay private, audio switches only at natural track boundary.",
+  "description": "First two verified original Jack Sullivan MP3s auto-delivered; music/drama remain private and playback switches at full track boundaries.",
   "music_rotation": [
     "wat002.mp3",
     "wat021.mp3",
@@ -74,6 +74,21 @@
       "sha256": "1617a27202cb7208d12de92502f739013cbf6d202562b16e6b3efdf2fd886f1c",
       "size": 484029,
       "durationSeconds": 29.153,
+      "verified_call_letters": true
+    },
+    {
+      "file": "jack-sullivan-world-of-tomorrow-2026-11-03.mp3",
+      "title": "Jack Sullivan — The World of Tomorrow",
+      "category": "night_host",
+      "broadcast_approved": true,
+      "approved_by": "WATOM programming director",
+      "approval_record": "jack-sullivan-tomorrow-id.json",
+      "voice_id": "hIAOYQ1TNWZSvbF1zJyI",
+      "origin_type": "original",
+      "rights_cleared": true,
+      "sha256": "816ca46939093d5f1936b1fe88312fa37f2a66eecbbdecb48bcb44ddafbe9dea",
+      "size": 457280,
+      "durationSeconds": 27.481,
       "verified_call_letters": true
     }
   ]
