@@ -44,8 +44,8 @@ for clip in tracks:
         fail("Invalid or repeated filename")
     seen.add(filename)
     cat=clip.get("category")
-    if cat not in ("bulletin","weather","civil_defense","ad","host","night_host","station_id","jingle"):
-        fail("Public feed is for original short-form audio only, NOT music or theater")
+    if cat not in ("bulletin","weather","civil_defense","ad","host","night_host","station_id","jingle","strange_tale","strange_teaser","strange_intro"):
+        fail("Public feed is for original station-owned recordings only, NOT third-party music or theater")
     if clip.get("broadcast_approved") is not True or clip.get("approved_by")!="WATOM programming director":
         fail("Unapproved audio")
     if clip.get("rights_cleared") is not True or clip.get("origin_type")!="original":
@@ -56,7 +56,8 @@ for clip in tracks:
         if start>=end or (end-start).total_seconds()>allowed*3600:
             fail("Weather/news validity expired or implausibly long")
     audio=ROOT/"weekly-releases/audio"/pack/filename
-    if not audio.is_file() or not 4096<=audio.stat().st_size<=900000:fail("Missing/oversized audio")
+    cap=8000000 if cat=="strange_tale" else 900000
+    if not audio.is_file() or not 4096<=audio.stat().st_size<=cap:fail("Missing/oversized audio")
     total+=audio.stat().st_size
     if total>24*1024*1024:fail("Weekly media exceeds 24 MiB cap")
     if clip.get("size")!=audio.stat().st_size:fail("Audio byte length mismatch")
@@ -89,7 +90,9 @@ for audio in sorted(hosted-allowed_audio):
     if not match: fail("Unapproved audio path in public repository")
     old_release,filename=match.groups()
     if old_release==pack: fail("Audio in current pack is missing from approved manifest")
-    if not 4096<=audio.stat().st_size<=900000:fail("Historical MP3 outside size limits")
+    # Longer original Saturday stories are archived with the same signed QA as short breaks.
+    # Independent original narration is allowed; third-party drama is not.
+    if not 4096<=audio.stat().st_size<=8000000:fail("Historical MP3 outside size limits")
     actual=sha256(audio.read_bytes()).hexdigest()
     try:historical_duration=MP3(audio).info.length
     except Exception:fail("Undecodable historical MP3")
