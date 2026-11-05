@@ -1,0 +1,50 @@
+name: Assemble approved original WATOM Saturday narration
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'weekly-releases/staging/2026-11-08-r1/story-parts/**'
+      - '.github/workflows/assemble-watom-story.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: watom-story-assembly
+  cancel-in-progress: false
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Reassemble original Bell Witch MP3 from verified R2 source
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib
+          base=Path('weekly-releases/staging/2026-11-08-r1/story-parts')
+          parts=[base/f'part-{i:02d}.bin' for i in range(7)]
+          for p in parts:
+              if not p.is_file(): raise SystemExit('Incomplete story upload: '+str(p))
+          raw=b''.join(p.read_bytes() for p in parts)
+          digest=hashlib.sha256(raw).hexdigest()
+          expected='95f13f7b62d737dc1f68074f367577b5009be558d3359e0ff2168b603ac57210'
+          if digest!=expected or len(raw)!=4230615:
+              raise SystemExit('Story MP3 checksum or size mismatch')
+          if not raw.startswith(b'ID3'):
+              raise SystemExit('Story audio is not MP3')
+          dest=Path('weekly-releases/audio/2026-11-08-r1/watom-bell-witch-strange-tale.mp3')
+          dest.parent.mkdir(parents=True,exist_ok=True)
+          dest.write_bytes(raw)
+          print('Verified original R2 story:',len(raw),'bytes',digest)
+          PY
+      - name: Commit approved MP3 to public station feed
+        run: |
+          git config user.name 'watom-release-bot'
+          git config user.email 'watom-release-bot@users.noreply.github.com'
+          git add weekly-releases/audio/2026-11-08-r1/watom-bell-witch-strange-tale.mp3
+          if git diff --cached --quiet; then echo 'Audio already assembled'; else
+            git commit -m 'audio: assemble approved original Bell Witch story from R2 master'
+            git push
+          fi
