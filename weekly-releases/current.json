@@ -1,95 +1,359 @@
 {
   "schema_version": 1,
   "station": "W.A.T.O.M. 1240 AM",
-  "release_id": "2026-11-03",
-  "revision": 2,
+  "release_id": "2026-11-08",
+  "revision": 1,
   "approved_by": "WATOM programming director",
-  "approved_at": "2026-11-03T11:55:43Z",
+  "approved_at": "2026-11-05T06:49:05.440469Z",
   "timezone": "America/Chicago",
-  "description": "First two verified original Jack Sullivan MP3s auto-delivered; music/drama remain private and playback switches at full track boundaries.",
+  "description": "First live update-system test: 30 private daytime songs, 16 private jazz songs, existing private True Vault Escapades, five rotating sponsor ads, three original jingles, Jack music links and Bell Witch Saturday Strange Tales. Music and shows remain on the device; new originals are downloaded after checksum validation.",
   "music_rotation": [
-    "wat002.mp3",
-    "wat021.mp3",
-    "wat040.mp3",
-    "wat006.mp3",
-    "wat011.mp3",
-    "wat003.mp3",
-    "wat014.mp3",
-    "watom-owner-music-05.mp3",
-    "wat004.mp3",
-    "wat015.mp3",
-    "watom-owner-music-06.mp3",
-    "wat009.mp3",
-    "wat022.mp3",
-    "wat020.mp3",
-    "wat016.mp3",
-    "wat001.mp3",
-    "wat013.mp3",
-    "wat018.mp3",
     "wat017.mp3",
+    "wat040.mp3",
+    "wat018.mp3",
     "watom-owner-music-01.mp3",
-    "wat039.mp3",
-    "wat008.mp3",
+    "wat001.mp3",
+    "wat021.mp3",
+    "wat011.mp3",
+    "wat015.mp3",
+    "wat004.mp3",
+    "wat005.mp3",
+    "wat016.mp3",
+    "wat006.mp3",
+    "wat009.mp3",
     "wat012.mp3",
-    "watom-owner-music-04.mp3",
-    "wat007.mp3",
+    "wat022.mp3",
+    "wat013.mp3",
+    "wat039.mp3",
     "watom-owner-music-03.mp3",
-    "watom-owner-music-02.mp3",
-    "wat010.mp3",
+    "wat003.mp3",
     "wat019.mp3",
-    "wat005.mp3"
+    "watom-owner-music-04.mp3",
+    "watom-owner-music-06.mp3",
+    "wat010.mp3",
+    "wat014.mp3",
+    "watom-owner-music-02.mp3",
+    "watom-owner-music-05.mp3",
+    "wat002.mp3",
+    "wat020.mp3",
+    "wat007.mp3",
+    "wat008.mp3"
   ],
   "jazz_rotation": [
-    "wat032.mp3",
-    "wat035.mp3",
-    "wat023.mp3",
-    "wat029.mp3",
-    "wat027.mp3",
-    "wat025.mp3",
-    "wat038.mp3",
-    "wat037.mp3",
-    "wat033.mp3",
     "wat026.mp3",
     "wat034.mp3",
-    "wat036.mp3",
+    "wat027.mp3",
     "wat031.mp3",
-    "wat030.mp3",
+    "wat037.mp3",
+    "wat032.mp3",
     "wat028.mp3",
-    "wat024.mp3"
+    "wat029.mp3",
+    "wat035.mp3",
+    "wat024.mp3",
+    "wat025.mp3",
+    "wat033.mp3",
+    "wat038.mp3",
+    "wat030.mp3",
+    "wat036.mp3",
+    "wat023.mp3"
   ],
   "ad_rotation": [
-    "starbrite-radio-polish-ad.mp3"
+    "starbrite-radio-polish-ad.mp3",
+    "ad-cosmic-carwash.mp3",
+    "ad-nebula-soda.mp3",
+    "ad-orbit-toaster.mp3",
+    "ad-starlight-lamps.mp3"
+  ],
+  "program_guide": [
+    {
+      "date": "2026-11-08",
+      "day": "Sunday",
+      "features": [
+        {
+          "local_time": "22:00",
+          "feature": "True Vault Escapades: The Case of The Green Robes",
+          "type": "owner_provided_episode",
+          "file": "wat041.mp3",
+          "private_library_only": true
+        }
+      ],
+      "dayparts": "6 AM–9 PM classic 1950s records; 9 PM–6 AM after-dark jazz; 10 PM full-length True Vault Escapades (where scheduled)"
+    },
+    {
+      "date": "2026-11-09",
+      "day": "Monday",
+      "features": [
+        {
+          "local_time": "22:00",
+          "feature": "True Vault Escapades: The Lonely Grave of Arch Stanton",
+          "type": "owner_provided_episode",
+          "file": "wat042.mp3",
+          "private_library_only": true
+        }
+      ],
+      "dayparts": "6 AM–9 PM classic 1950s records; 9 PM–6 AM after-dark jazz; 10 PM full-length True Vault Escapades (where scheduled)"
+    },
+    {
+      "date": "2026-11-10",
+      "day": "Tuesday",
+      "features": [
+        {
+          "local_time": "22:00",
+          "feature": "True Vault Escapades: The Case of The Green Robes",
+          "type": "owner_provided_episode",
+          "file": "wat041.mp3",
+          "private_library_only": true
+        }
+      ],
+      "dayparts": "6 AM–9 PM classic 1950s records; 9 PM–6 AM after-dark jazz; 10 PM full-length True Vault Escapades (where scheduled)"
+    },
+    {
+      "date": "2026-11-11",
+      "day": "Wednesday",
+      "features": [
+        {
+          "local_time": "22:00",
+          "feature": "True Vault Escapades: The Lonely Grave of Arch Stanton",
+          "type": "owner_provided_episode",
+          "file": "wat042.mp3",
+          "private_library_only": true
+        }
+      ],
+      "dayparts": "6 AM–9 PM classic 1950s records; 9 PM–6 AM after-dark jazz; 10 PM full-length True Vault Escapades (where scheduled)"
+    },
+    {
+      "date": "2026-11-12",
+      "day": "Thursday",
+      "features": [
+        {
+          "local_time": "22:00",
+          "feature": "True Vault Escapades: The Case of The Green Robes",
+          "type": "owner_provided_episode",
+          "file": "wat041.mp3",
+          "private_library_only": true
+        }
+      ],
+      "dayparts": "6 AM–9 PM classic 1950s records; 9 PM–6 AM after-dark jazz; 10 PM full-length True Vault Escapades (where scheduled)"
+    },
+    {
+      "date": "2026-11-13",
+      "day": "Friday",
+      "features": [
+        {
+          "local_time": "22:00",
+          "feature": "True Vault Escapades: The Lonely Grave of Arch Stanton",
+          "type": "owner_provided_episode",
+          "file": "wat042.mp3",
+          "private_library_only": true
+        }
+      ],
+      "dayparts": "6 AM–9 PM classic 1950s records; 9 PM–6 AM after-dark jazz; 10 PM full-length True Vault Escapades (where scheduled)"
+    },
+    {
+      "date": "2026-11-14",
+      "day": "Saturday",
+      "features": [
+        {
+          "local_time": "21:00",
+          "feature": "Saturday Strange Tales — The Bell Witch: The Voice in the Walls",
+          "type": "original_jack_folklore",
+          "file": "watom-bell-witch-strange-tale.mp3"
+        },
+        {
+          "local_time": "22:00",
+          "feature": "True Vault Escapades: The Case of The Green Robes",
+          "type": "owner_provided_episode",
+          "file": "wat041.mp3",
+          "private_library_only": true
+        }
+      ],
+      "dayparts": "6 AM–9 PM classic 1950s records; 9 PM–6 AM after-dark jazz; 10 PM full-length True Vault Escapades (where scheduled)"
+    }
   ],
   "tracks": [
     {
-      "file": "jack-weekly-signal-2026-11-03.mp3",
-      "title": "Jack \"Sparky\" Sullivan — The Sunday Signal Arrives",
+      "file": "ad-cosmic-carwash.mp3",
+      "title": "Cosmic Car Wash",
+      "category": "ad",
+      "broadcast_approved": true,
+      "approved_by": "WATOM programming director",
+      "approval_record": "ad-cosmic-carwash-qa.json",
+      "voice_id": "hIAOYQ1TNWZSvbF1zJyI",
+      "origin_type": "original",
+      "rights_cleared": true,
+      "sha256": "3e9d889e24d7f71ffc700bd24dbd151887fb4f0e0b1ebd89c55634c50fc5ee07",
+      "size": 262511,
+      "durationSeconds": 15.28
+    },
+    {
+      "file": "ad-nebula-soda.mp3",
+      "title": "Nebula Soda Fountain",
+      "category": "ad",
+      "broadcast_approved": true,
+      "approved_by": "WATOM programming director",
+      "approval_record": "ad-nebula-soda-qa.json",
+      "voice_id": "hIAOYQ1TNWZSvbF1zJyI",
+      "origin_type": "original",
+      "rights_cleared": true,
+      "sha256": "39a1acd6d7d82bcd4b77bef2e5a73c98a246b4d68fa7caddc39066ea8a070664",
+      "size": 311412,
+      "durationSeconds": 18.32
+    },
+    {
+      "file": "ad-orbit-toaster.mp3",
+      "title": "Orbit-O-Matic Toaster",
+      "category": "ad",
+      "broadcast_approved": true,
+      "approved_by": "WATOM programming director",
+      "approval_record": "ad-orbit-toaster-qa.json",
+      "voice_id": "hIAOYQ1TNWZSvbF1zJyI",
+      "origin_type": "original",
+      "rights_cleared": true,
+      "sha256": "81d20c0a6a0cf4478552df9ee429f48012039725aa851f20642164f4fa7c5a57",
+      "size": 263764,
+      "durationSeconds": 15.36
+    },
+    {
+      "file": "ad-starlight-lamps.mp3",
+      "title": "Starlight Table Lamps",
+      "category": "ad",
+      "broadcast_approved": true,
+      "approved_by": "WATOM programming director",
+      "approval_record": "ad-starlight-lamps-qa.json",
+      "voice_id": "hIAOYQ1TNWZSvbF1zJyI",
+      "origin_type": "original",
+      "rights_cleared": true,
+      "sha256": "f7250fa82b232f279544020c71ff2af23d1f8bac9bfdcaa1002956c2f7162071",
+      "size": 267944,
+      "durationSeconds": 15.6
+    },
+    {
+      "file": "jack-afternoon-break.mp3",
+      "title": "Jack — Afternoon Golden Records Link",
       "category": "host",
       "broadcast_approved": true,
       "approved_by": "WATOM programming director",
-      "approval_record": "jack-weekly-signal-2026-11-03.json",
+      "approval_record": "jack-afternoon-break-qa.json",
       "voice_id": "hIAOYQ1TNWZSvbF1zJyI",
       "origin_type": "original",
       "rights_cleared": true,
-      "sha256": "1617a27202cb7208d12de92502f739013cbf6d202562b16e6b3efdf2fd886f1c",
-      "size": 484029,
-      "durationSeconds": 29.153,
-      "verified_call_letters": true
+      "sha256": "bfab28d9045175fd1b88a4efc31e132ef3869037c9d97aa210c3a94f24b4c1b2",
+      "size": 203996,
+      "durationSeconds": 11.6
     },
     {
-      "file": "jack-sullivan-world-of-tomorrow-2026-11-03.mp3",
-      "title": "Jack Sullivan — The World of Tomorrow",
+      "file": "jack-evening-break.mp3",
+      "title": "Jack — Evening Music Link",
+      "category": "host",
+      "broadcast_approved": true,
+      "approved_by": "WATOM programming director",
+      "approval_record": "jack-evening-break-qa.json",
+      "voice_id": "hIAOYQ1TNWZSvbF1zJyI",
+      "origin_type": "original",
+      "rights_cleared": true,
+      "sha256": "de70353216879ebe36e353f88c3d26ed75a0db9ec838719fb8e6942670b8bef2",
+      "size": 181844,
+      "durationSeconds": 10.24
+    },
+    {
+      "file": "jack-night-jazz-break.mp3",
+      "title": "Jack — Atomic Lounge After Dark",
       "category": "night_host",
       "broadcast_approved": true,
       "approved_by": "WATOM programming director",
-      "approval_record": "jack-sullivan-tomorrow-id.json",
+      "approval_record": "jack-night-jazz-break-qa.json",
       "voice_id": "hIAOYQ1TNWZSvbF1zJyI",
       "origin_type": "original",
       "rights_cleared": true,
-      "sha256": "816ca46939093d5f1936b1fe88312fa37f2a66eecbbdecb48bcb44ddafbe9dea",
-      "size": 457280,
-      "durationSeconds": 27.481,
-      "verified_call_letters": true
+      "sha256": "d7f5c0d5172c82399a9037324e7cce65edee8d82ba76d93ee7c7699fa5627b59",
+      "size": 191040,
+      "durationSeconds": 10.8
+    },
+    {
+      "file": "jack-saturday-story-teaser.mp3",
+      "title": "Jack — Bell Witch Saturday Story Teaser",
+      "category": "strange_teaser",
+      "broadcast_approved": true,
+      "approved_by": "WATOM programming director",
+      "approval_record": "jack-saturday-story-teaser-qa.json",
+      "voice_id": "hIAOYQ1TNWZSvbF1zJyI",
+      "origin_type": "original",
+      "rights_cleared": true,
+      "sha256": "29335e699af10437d84b9691832e6a8b2e8c02d9088ea02c613fd8ea3570a0b3",
+      "size": 335653,
+      "durationSeconds": 19.84,
+      "valid_from": "2026-11-08T06:00:00-06:00",
+      "valid_until": "2026-11-15T00:00:00-06:00"
+    },
+    {
+      "file": "jack-sunrise-break.mp3",
+      "title": "Jack — Atomic Sunrise Music Link",
+      "category": "host",
+      "broadcast_approved": true,
+      "approved_by": "WATOM programming director",
+      "approval_record": "jack-sunrise-break-qa.json",
+      "voice_id": "hIAOYQ1TNWZSvbF1zJyI",
+      "origin_type": "original",
+      "rights_cleared": true,
+      "sha256": "87073727415d8fb08e189d245218ed250ec844f8179efcbc63a71024662458af",
+      "size": 176829,
+      "durationSeconds": 9.92
+    },
+    {
+      "file": "jingle-atomic-frontier.mp3",
+      "title": "Atomic Frontier Radio Jingle",
+      "category": "jingle",
+      "broadcast_approved": true,
+      "approved_by": "WATOM programming director",
+      "approval_record": "jingle-atomic-frontier-qa.json",
+      "voice_id": "hIAOYQ1TNWZSvbF1zJyI",
+      "origin_type": "original",
+      "rights_cleared": true,
+      "sha256": "675eaf449126be95a0ec1c8ce0d04ed71862f58ff8ba108807a0e610c113e206",
+      "size": 113719,
+      "durationSeconds": 11.36
+    },
+    {
+      "file": "jingle-golden-records.mp3",
+      "title": "Golden Records Jingle",
+      "category": "jingle",
+      "broadcast_approved": true,
+      "approved_by": "WATOM programming director",
+      "approval_record": "jingle-golden-records-qa.json",
+      "voice_id": "hIAOYQ1TNWZSvbF1zJyI",
+      "origin_type": "original",
+      "rights_cleared": true,
+      "sha256": "6703608a61a5a46f2a32832999fdf4da043a7e6a1e40fbcdab67e9d7c52aa0c8",
+      "size": 103315,
+      "durationSeconds": 10.48
+    },
+    {
+      "file": "jingle-rocket-hour.mp3",
+      "title": "Rocket Hour Jingle",
+      "category": "jingle",
+      "broadcast_approved": true,
+      "approved_by": "WATOM programming director",
+      "approval_record": "jingle-rocket-hour-qa.json",
+      "voice_id": "hIAOYQ1TNWZSvbF1zJyI",
+      "origin_type": "original",
+      "rights_cleared": true,
+      "sha256": "c3e0d6d902005df8a06d4a92fb5a500c3ed9f429e4debbae3c8233bb68b9b551",
+      "size": 95120,
+      "durationSeconds": 9.52
+    },
+    {
+      "file": "watom-bell-witch-strange-tale.mp3",
+      "title": "Saturday Strange Tales — The Bell Witch: The Voice in the Walls",
+      "category": "strange_tale",
+      "broadcast_approved": true,
+      "approved_by": "WATOM programming director",
+      "approval_record": "watom-bell-witch-strange-tale-qa.json",
+      "voice_id": "hIAOYQ1TNWZSvbF1zJyI",
+      "origin_type": "original",
+      "rights_cleared": true,
+      "sha256": "95f13f7b62d737dc1f68074f367577b5009be558d3359e0ff2168b603ac57210",
+      "size": 4230615,
+      "durationSeconds": 263.28
     }
   ]
 }
